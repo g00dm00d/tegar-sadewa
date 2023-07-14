@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tegar Sadewa</title>
+    <link rel="icon" type="Tegar Sadewa" href="dist/img/skill/reactJS1.png" />
+    <link href="dist/output.css" rel="stylesheet" />
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Cieee kepooo 😜 -->
+
+    <!-- Header Start -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4 flex flex-wrap">
+            <a href=""
+              ><img
+                class="block py-6 max-w-[33px] animate-spin-slow md:top-10 md:left-24"
+                src="dist/img/skill/reactJS1.png"
+                alt=""
+            /></a>
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-top-left"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
+              ></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:dark:bg-transparent"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#about"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
+                    >About</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#portfolio"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#skill"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
+                    >Skill</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#education"
+                    class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white"
+                    >Education</a
+                  >
+                </li>
+                <li class="flex items-center pl-8 mt-3 lg:mt-0">
+                  <div class="flex">
+                    <span class="mr-2 text-sm text-slate-500">Light</span>
+                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                    <label for="dark-toggle">
+                      <div
+                        class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1"
+                      >
+                        <div
+                          class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"
+                        ></div>
+                      </div>
+                    </label>
+                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section id="hero" class="pt-24 pb-5 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2">
+            <h1 class="text-base font-semibold text-primary md:text-xl">
+              Hallo Semua 👋, saya
+              <span
+                class="block font-bold text-dark text-4xl mt-1 mb-1 lg:text-5xl dark:text-white"
+                >Tegar Sadewa</span
+              >
+            </h1>
+            <h2 class="font-medium text-secondary text-lg lg:text-2xl">
+              <span class="text-dark dark:text-white">Newbie </span>
+              Front-end Developer
+            </h2>
+            <p
+              class="font-medium text-base text-secondary max-w-xl mb-3 lg:text-lg"
+            >
+              Terangi hari<span class="text-dark dark:text-white">ku</span>
+              dengan loker<span class="text-dark dark:text-white">mu</span>
+            </p>
+            <h2
+              class="font-medium text-dark dark:text-white text-lg mb-1 lg:text-2xl"
+            >
+              Find Me On
+            </h2>
+            <div class="flex items-center mb-5">
+              <!-- Facebook -->
+              <a
+                href="https://web.facebook.com/tegar.sadewa.14/"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-blue-800 hover:bg-blue-500 hover:text-white dark:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Facebook</title>
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <!-- Whatsapp -->
+              <a
+                href="https://wa.me/6289624673732"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-green-800 hover:bg-green-500 hover:text-white dark:dark:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>WhatsApp</title>
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                  />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/tegarsadewa_/"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-orange-800 hover:bg-orange-500 hover:text-white dark:dark:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Instagram</title>
+                  <path
+                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                  />
+                </svg>
+              </a>
+              <!-- Line -->
+              <a
+                href="https://line.me/ti/p/~tegarsadewa"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-green-800 hover:bg-green-500 hover:text-white dark:dark:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>LINE</title>
+                  <path
+                    d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"
+                  />
+                </svg>
+              </a>
+              <!-- Threads -->
+              <!-- <a
+                href="https://line.me/ti/p/~tegarsadewa"
+                target="_blank"
+                class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-slate-700 hover:bg-slate-500 hover:text-white dark:dark:text-white"
+              >
+                <svg
+                  role="img"
+                  width="20"
+                  class="fill-current"
+                  `
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Threads</title>
+                  <path
+                    d="M17.743 11.123a8.547 8.547 0 0 0-.315-.142c-.185-3.414-2.05-5.368-5.182-5.388h-.042c-1.874 0-3.431.8-4.39 2.255l1.722 1.181c.716-1.087 1.84-1.319 2.669-1.319h.028c1.031.007 1.81.307 2.313.892.367.425.612 1.014.733 1.756a13.176 13.176 0 0 0-2.96-.143c-2.977.172-4.892 1.908-4.763 4.321.065 1.224.675 2.277 1.717 2.965.88.582 2.015.866 3.195.802 1.557-.086 2.778-.68 3.63-1.766.648-.825 1.057-1.894 1.238-3.241.742.448 1.292 1.037 1.596 1.745.517 1.205.547 3.184-1.068 4.797-1.415 1.414-3.116 2.025-5.686 2.044-2.851-.02-5.008-.935-6.41-2.717-1.313-1.67-1.991-4.08-2.016-7.165.025-3.085.703-5.496 2.016-7.165 1.402-1.782 3.558-2.696 6.41-2.717 2.871.02 5.065.94 6.521 2.73.714.879 1.252 1.983 1.607 3.27l2.018-.538c-.43-1.585-1.107-2.95-2.027-4.083C18.43 1.2 15.7.024 12.185 0h-.014C8.66.024 5.963 1.205 4.15 3.51c-1.614 2.05-2.446 4.905-2.474 8.482v.016c.028 3.578.86 6.431 2.473 8.482 1.813 2.305 4.512 3.486 8.022 3.51h.014c3.12-.022 5.319-.839 7.13-2.649 2.371-2.368 2.3-5.336 1.518-7.158-.56-1.307-1.629-2.368-3.09-3.07zm-5.387 5.065c-1.305.074-2.66-.512-2.728-1.766-.05-.93.662-1.969 2.808-2.092.246-.015.487-.021.724-.021.78 0 1.508.075 2.171.22-.247 3.088-1.697 3.59-2.975 3.66z"
+                  />
+                </svg>
+              </a> -->
+            </div>
+            <a
+              href="#"
+              target="_blank"
+              class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out"
+              >Download CV</a
+            >
+          </div>
+
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10 lg:right-0">
+              <img
+                src="dist/img/keyboard.png"
+                alt="Tegar Sadewa"
+                class="relative z-10 max-w-[85%] mx-auto"
+              />
+              <span
+                class="absolute rotate-12 max-w-[full] -top-9 -left-10 animate-pulse md:left-6 md:top-9"
+              >
+                <img src="dist/img/drink.png" alt="drink" />
+              </span>
+              <span
+                class="absolute -rotate-[25deg] max-w-[200px] top-52 animate-pulse left-1 md:top-80"
+              >
+                <img src="dist/img/game.png" alt="game" />
+              </span>
+              <span
+                class="absolute rotate-12 max-w-full top-60 animate-pulse scale-150 right-4 md:right-9 md:top-80 md:scale-150"
+              >
+                <img src="dist/img/cam.png" alt="cam" />
+              </span>
+              <span
+                class="absolute rotate-12 max-w-full top-9 animate-pulse scale-125 right-2 md:top-24 md:right-20"
+              >
+                <img src="dist/img/lifebuoy.png" alt="lifebuoy" />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="pt-24 pb-5 dark:bg-dark">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full px-4 mb-10 lg:w-1/2">
+            <h4 class="font-bold uppercase text-primary text-lg mb-3">About</h4>
+            <h2
+              class="font-bold text-dark text-3xl mb-1 max-w-xl lg:text-4xl dark:text-white"
+            >
+              Newbie
+            </h2>
+            <p
+              class="font-medium text-base text-secondary max-w-xl text-justify lg:text-lg"
+            >
+              Tipe orang yang suka belajar hal-hal baru, terutama dibidang
+              Teknologi. Suka main-main sama Software Editing dan Programming.
+              Sekarang lagi fokus belajar Web Development, dan berharap bisa
+              ngulik programming lebih dalam lagi.
+            </p>
+          </div>
+          <div class="w-full px-4 lg:w-1/2">
+            <h3
+              class="font-semibold text-dark text-2xl mb-1 lg:text-3xl lg:pt-10 dark:text-white"
+            >
+              Basic Information
+            </h3>
+            <div class="w-full flex flex-wrap">
+              <div class="w-1/4">
+                <p
+                  class="font-medium text-base text-dark max-w-xl lg:text-lg dark:text-white"
+                >
+                  Age
+                </p>
+                <p
+                  class="font-medium text-base text-dark max-w-xl lg:text-lg dark:text-white"
+                >
+                  Email
+                </p>
+                <p
+                  class="font-medium text-base text-dark max-w-xl lg:text-lg dark:text-white"
+                >
+                  Phone
+                </p>
+                <p
+                  class="font-medium text-base text-dark max-w-xl lg:text-lg dark:text-white"
+                >
+                  Address
+                </p>
+              </div>
+              <div class="w-3/4">
+                <p
+                  class="font-medium text-base text-secondary max-w-xl lg:text-lg"
+                >
+                  21
+                </p>
+                <p
+                  class="font-medium text-base text-secondary max-w-xl lg:text-lg"
+                >
+                  tegarsadewaaa@gmail.com
+                </p>
+                <p
+                  class="font-medium text-base text-secondary max-w-xl lg:text-lg"
+                >
+                  089624673732
+                </p>
+                <p
+                  class="font-medium text-base text-secondary max-w-xl lg:text-lg"
+                >
+                  Palembang, Sumatera Selatan, 30149
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Portfolio Section Start -->
+    <section id="portfolio" class="pt-24 pb-5 bg-slate-100 dark:bg-slate-800">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
+            <h2
+              class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl dark:dark:text-white"
+            >
+              My Projects
+            </h2>
+          </div>
+        </div>
+
+        <div class="w-full px-4 flex flex-wrap justify-center">
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <div class="relative">
+                <a href="https://goodmood.vercel.app/" target="_blank">
+                  <img
+                    src="dist/img/portfolio/goodMood.png"
+                    alt="Landing Page Good Mood"
+                    width="w-full"
+                  />
+                </a>
+                <div
+                  class="absolute p-2 md:p-3 flex gap-2 justify-end bottom-0 right-0"
+                >
+                  <div
+                    class="w-[10%] h-[15%] justify-center md:h-12 md:w-12 flex bg-slate-700 p-1 rounded-lg"
+                  >
+                    <img src="dist/img/skill/javaScript.svg" alt="javaScript" />
+                  </div>
+                  <div
+                    class="w-[10%] h-[15%] justify-center md:h-12 md:w-12 flex bg-slate-700 p-1 rounded-lg"
+                  >
+                    <img
+                      src="dist/img/skill/TailwindCSS.svg"
+                      alt="TailwindCSS"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3
+              class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white"
+            >
+              Website Good Mood
+            </h3>
+            <p class="font-medium text-base text-secondary">
+              Dibuat menggunakan TailwindCSS dan sedikit javaScript.
+            </p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <div class="relative">
+                <a href="https://kopi-atok.vercel.app/" target="_blank">
+                  <img
+                    src="dist/img/portfolio/kopiAtok.jpg"
+                    alt="Landing Page Kopi Atok"
+                    width="w-full"
+                  />
+                </a>
+                <div
+                  class="absolute p-2 md:p-3 flex gap-2 justify-end bottom-0 right-0"
+                >
+                  <div
+                    class="w-[10%] h-[10%] justify-center md:h-12 md:w-12 flex bg-white p-1 rounded-lg"
+                  >
+                    <img src="dist/img/skill/HTML5.svg" alt="HTML5" />
+                  </div>
+                  <div
+                    class="w-[10%] h-[10%] justify-center md:h-12 md:w-12 flex bg-white p-1 rounded-lg"
+                  >
+                    <img src="dist/img/skill/CSS3.svg" alt="CSS3" />
+                  </div>
+                  <div
+                    class="w-[10%] h-[10%] justify-center md:h-12 md:w-12 flex bg-white p-1 rounded-lg"
+                  >
+                    <img src="dist/img/skill/javaScript.svg" alt="javaScript" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3
+              class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white"
+            >
+              Website Kopi Atok
+            </h3>
+            <p class="font-medium text-base text-secondary">
+              Dibuat menggunakan CSS Murni yang biasanya disebut Vanilla CSS.
+            </p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <div class="relative">
+                <a href="https://plat-r.vercel.app/" target="_blank"
+                  ><img
+                    src="dist/img/portfolio/platR.jpg"
+                    alt="Landing Page Plat R"
+                    width="w-full"
+                /></a>
+                <div
+                  class="absolute p-2 md:p-3 flex gap-2 justify-end bottom-0 right-0"
+                >
+                  <div
+                    class="w-[11%] h-[11%] justify-center md:h-12 md:w-14 flex bg-white p-1 rounded-lg"
+                  >
+                    <img src="dist/img/skill/Bootstrap.svg" alt="Bootstrap" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3
+              class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white"
+            >
+              Website Plat R
+            </h3>
+            <p class="font-medium text-base text-secondary">
+              Dibuat menggunakan Framework Bootstrap.
+            </p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <div class="relative">
+                <img
+                  src="dist/img/portfolio/pppkGuru.jpg"
+                  alt="PPPK Guru"
+                  width="w-full"
+                />
+                <div
+                  class="absolute p-2 md:p-3 flex gap-2 justify-end bottom-0 right-0"
+                >
+                  <div
+                    class="w-[14%] h-[14%] justify-center md:h-12 md:w-14 flex bg-white p-1 rounded-lg"
+                  >
+                    <img
+                      src="dist/img/skill/adobePhotoshop.svg"
+                      alt="PhotoShop"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3
+              class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white"
+            >
+              Alur Tahapan Seleksi PPPK Guru
+            </h3>
+            <p class="font-medium text-base text-secondary">
+              Dibuat menggunakan Adobe Photoshop.
+            </p>
+          </div>
+          <div class="mb-12 p-4 md:w-1/2">
+            <div class="rounded-md shadow-md overflow-hidden">
+              <div class="relative">
+                <img
+                  src="dist/img/portfolio/ninjasage.jpg"
+                  alt="ninjasage"
+                  width="w-full"
+                />
+                <div
+                  class="absolute p-2 md:p-3 flex gap-2 justify-end bottom-0 right-0"
+                >
+                  <div
+                    class="w-[14%] h-[14%] justify-center md:h-12 md:w-14 flex bg-white p-1 rounded-lg"
+                  >
+                    <img
+                      src="dist/img/skill/adobePhotoshop.svg"
+                      alt="PhotoShop"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h3
+              class="font-semibold text-xl text-dark mt-5 mb-3 dark:text-white"
+            >
+              Fanart Ninja Sage
+            </h3>
+            <p class="font-medium text-base text-secondary">
+              Digambar secara tradisional kemudian dibuat menjadi gambar digital
+              menggunakan Camscanner setelah itu diwarnai menggunakan Adobe
+              Photoshop.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Portfolio Section End -->
+
+    <!-- Skill Section Start -->
+    <section id="skill" class="py-[90px] bg-slate-700 dark:bg-slate-200">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="mx-auto text-center mb-2">
+            <h4 class="font-semibold text-3xl text-primary mb-2">My Skills</h4>
+          </div>
+        </div>
+
+        <div class="w-full px-4">
+          <div class="flex flex-wrap items-center justify-center">
+            <img
+              src="dist/img/skill/mcWord.svg"
+              alt="Microsoft Word"
+              class="max-w-[45px] md:max-w-[60px] mx-4 py-4 lg:mx-6 xl:mx-8"
+            />
+
+            <img
+              src="dist/img/skill/mcExcell.svg"
+              alt="Microsoft Excell"
+              class="max-w-[45px] md:max-w-[60px] mx-4 py-4 lg:mx-6 xl:mx-8"
+            />
+
+            <img
+              src="dist/img/skill/adobePhotoshop.svg"
+              alt="PhotoShop"
+              class="max-w-[45px] md:max-w-[60px] mx-4 py-4 lg:mx-6 xl:mx-8"
+            />
+            <img
+              src="dist/img/skill/adobePremierPro.svg"
+              alt="PremierPro"
+              class="max-w-[45px] md:max-w-[60px] mx-4 py-4 lg:mx-6 xl:mx-8"
+            />
+            <img
+              src="dist/img/skill/Bootstrap.svg"
+              alt="Bootstrap"
+              class="max-w-[45px] md:max-w-[60px] mx-4 py-4 lg:mx-6 xl:mx-8"
+            />
+            <img
+              src="dist/img/skill/TailwindCSS.svg"
+              alt="TailwindCSS"
+              class="max-w-[45px] md:max-w-[60px] mx-4 py-4 lg:mx-6 xl:mx-8"
+            />
+            <img
+              src="dist/img/skill/reactJS.svg"
+              alt="reactJS"
+              class="max-w-[45px] md:max-w-[60px] mx-4 py-4 lg:mx-6 xl:mx-8"
+            />
+            <img
+              src="dist/img/skill/javaScript.svg"
+              alt="javaScript"
+              class="max-w-[45px] md:max-w-[60px] mx-4 py-4 lg:mx-6 xl:mx-8"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Skill Section End -->
+
+    <!-- Education Coba Section Start -->
+    <section id="education" class="pt-24 pb-5 bg-slate-100 dark:bg-slate-800">
+      <div class="container">
+        <div class="w-full px-4">
+          <div class="max-w-xl mx-auto text-center mb-16">
+            <h4 class="font-bold text-3xl text-primary mb-2">Education</h4>
+          </div>
+        </div>
+        <div class="w-full px-4">
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 flex flex-wrap md:w-1/2 mx-auto dark:bg-dark"
+          >
+            <div class="w-1/3 text-center">
+              <p class="font-medium text-xs md:text-sm text-secondary pt-3">
+                2019 - 2022
+              </p>
+              <h3
+                class="block mb-3 font-semibold text-sm md:text-xl text-dark truncate text-center dark:text-white"
+              >
+                Diploma 3
+              </h3>
+
+              <img
+                src="dist/img/education/unsri.svg"
+                alt="programming"
+                class="max-w-[60px] md:max-w-[80px] flex m-auto"
+              />
+            </div>
+            <div class="py-7 md:py-8 px-6 w-2/3">
+              <h3
+                class="block mb-3 font-semibold text-sm md:text-xl text-dark hover:text-yellow-400 dark:text-white dark:hover:text-yellow-400"
+              >
+                UNIVERSITAS SRIWIJAYA
+              </h3>
+              <p class="font-medium text-xs md:text-base text-secondary mb-6">
+                Manajemen Informatika
+              </p>
+              <a
+                href="https://unsri.ac.id/"
+                class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80"
+                >Kunjungi Website</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="w-full px-4">
+          <div
+            class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 flex flex-wrap md:w-1/2 mx-auto dark:bg-dark"
+          >
+            <div class="w-1/3 text-center">
+              <p class="font-medium text-xs md:text-sm text-secondary pt-3">
+                2016 - 2019
+              </p>
+              <h3
+                class="block mb-3 font-semibold text-sm md:text-xl text-dark truncate text-center dark:text-white"
+              >
+                SMA
+              </h3>
+
+              <img
+                src="dist/img/education/smanpoel.svg"
+                alt="programming"
+                class="max-w-[60px] md:max-w-[80px] flex m-auto"
+              />
+            </div>
+            <div class="py-7 md:py-8 px-6 w-2/3">
+              <h3
+                class="block mb-3 font-semibold text-sm md:text-xl text-dark hover:text-blue-600 dark:text-white dark:hover:text-blue-600"
+              >
+                SMAN 10 PALEMBANG
+              </h3>
+              <p class="font-medium text-xs md:text-base text-secondary mb-6">
+                Ilmu Pengetahuan Alam
+              </p>
+              <a
+                href="https://smanegeri10palembang.sch.id/"
+                class="font-medium text-sm text-white bg-primary py-2 px-4 rounded-lg hover:opacity-80"
+                >Kunjungi Website</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Education Coba Section End -->
+
+    <!-- Footer Start -->
+    <footer class="bg-dark pt-4 pb-4">
+      <div class="container">
+        <div class="w-full">
+          <h3
+            class="mb-3 font-semibold text-xl text-white text-center hover:text-primary truncate dark:text-white dark:hover:text-primary"
+          >
+            Sosial Media
+          </h3>
+          <div class="flex items-center justify-center mb-3">
+            <!-- Facebook -->
+            <a
+              href="https://web.facebook.com/tegar.sadewa.14/"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center text-white border ring-2 ring-slate-300 hover:border-primary hover:bg-blue-500 hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Facebook</title>
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+            <!-- Whatsapp -->
+            <a
+              href="https://wa.me/6289624673732"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-white border ring-2 ring-slate-300 hover:bg-green-500 hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>WhatsApp</title>
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                />
+              </svg>
+            </a>
+            <!-- Instagram -->
+            <a
+              href="https://www.instagram.com/tegarsadewa_/"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-white border ring-2 ring-slate-300 hover:bg-orange-500 hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Instagram</title>
+                <path
+                  d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"
+                />
+              </svg>
+            </a>
+            <!-- Threads -->
+            <a
+              href="https://www.threads.net/@g0.0d_m0.0d"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-white ring-2 ring-slate-300 hover:bg-slate-500 hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>Threads</title>
+                <path
+                  d="M17.743 11.123a8.547 8.547 0 0 0-.315-.142c-.185-3.414-2.05-5.368-5.182-5.388h-.042c-1.874 0-3.431.8-4.39 2.255l1.722 1.181c.716-1.087 1.84-1.319 2.669-1.319h.028c1.031.007 1.81.307 2.313.892.367.425.612 1.014.733 1.756a13.176 13.176 0 0 0-2.96-.143c-2.977.172-4.892 1.908-4.763 4.321.065 1.224.675 2.277 1.717 2.965.88.582 2.015.866 3.195.802 1.557-.086 2.778-.68 3.63-1.766.648-.825 1.057-1.894 1.238-3.241.742.448 1.292 1.037 1.596 1.745.517 1.205.547 3.184-1.068 4.797-1.415 1.414-3.116 2.025-5.686 2.044-2.851-.02-5.008-.935-6.41-2.717-1.313-1.67-1.991-4.08-2.016-7.165.025-3.085.703-5.496 2.016-7.165 1.402-1.782 3.558-2.696 6.41-2.717 2.871.02 5.065.94 6.521 2.73.714.879 1.252 1.983 1.607 3.27l2.018-.538c-.43-1.585-1.107-2.95-2.027-4.083C18.43 1.2 15.7.024 12.185 0h-.014C8.66.024 5.963 1.205 4.15 3.51c-1.614 2.05-2.446 4.905-2.474 8.482v.016c.028 3.578.86 6.431 2.473 8.482 1.813 2.305 4.512 3.486 8.022 3.51h.014c3.12-.022 5.319-.839 7.13-2.649 2.371-2.368 2.3-5.336 1.518-7.158-.56-1.307-1.629-2.368-3.09-3.07zm-5.387 5.065c-1.305.074-2.66-.512-2.728-1.766-.05-.93.662-1.969 2.808-2.092.246-.015.487-.021.724-.021.78 0 1.508.075 2.171.22-.247 3.088-1.697 3.59-2.975 3.66z"
+                />
+              </svg>
+            </a>
+            <!-- Line -->
+            <a
+              href="http://line.me/ti/p/~tegarsadewa"
+              target="_blank"
+              class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border text-white border ring-2 ring-slate-300 hover:bg-green-500 hover:text-white"
+            >
+              <svg
+                role="img"
+                width="20"
+                class="fill-current"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>LINE</title>
+                <path
+                  d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <p class="font-medium text-xs text-slate-500 text-center">
+          Dibuat Oleh
+          <a
+            href="https://www.instagram.com/tegarsadewa_/"
+            target="_blank"
+            class="font-bold text-white"
+            >Tegar Sadewa</a
+          >, menggunakan
+          <a
+            href="https://tailwindcss.com/"
+            target="_blank"
+            class="font-bold text-sky-500"
+            >Tailwind CSS</a
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Back to top Start -->
+    <a
+      href="#"
+      class="fixed -rotate-[43deg] bottom-6 right-2 md:bottom-7 md:right-4 z-[9999] hidden h-14 w-14 items-center justify-center rounded-full p4 hover:bottom-5 hover:md:bottom-6 hover:opacity-90"
+      id="to-top"
+    >
+      <img src="dist/img/rocket.png" alt="roket" />
+    </a>
+    <!-- Back to top End -->
+
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>
+<link href="/dist/output.css" rel="stylesheet" />
