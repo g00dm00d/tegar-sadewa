@@ -885,6 +885,22 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
+
 @keyframes pulse {
   50% {
     opacity: .5;
@@ -1014,6 +1030,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-dark\/75 {
+  background-color: rgb(15 23 42 / 0.75);
+}
+
 .fill-current {
   fill: currentColor;
 }
@@ -1078,6 +1098,16 @@ video {
 .py-\[90px\] {
   padding-top: 90px;
   padding-bottom: 90px;
+}
+
+.py-36 {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+}
+
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .pb-4 {
@@ -1187,6 +1217,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-dark\/75 {
+  color: rgb(15 23 42 / 0.75);
 }
 
 .shadow-lg {
@@ -1604,9 +1638,25 @@ body {
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
+:is(:where(.dark) .dark\:bg-dark\/80) {
+  background-color: rgb(15 23 42 / 0.8);
+}
+
+:is(:where(.dark) .dark\:bg-dark\/95) {
+  background-color: rgb(15 23 42 / 0.95);
+}
+
+:is(:where(.dark) .dark\:bg-dark\/90) {
+  background-color: rgb(15 23 42 / 0.9);
+}
+
 :is(:where(.dark) .dark\:text-white) {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+:is(:where(.dark) .dark\:text-white\/75) {
+  color: rgb(255 255 255 / 0.75);
 }
 
 :is(:where(.dark) .dark\:shadow-slate-500) {
